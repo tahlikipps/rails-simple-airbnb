@@ -13,3 +13,82 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  font-family: 'Roboto';
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-bar {
+  background-color: rgb(242, 242, 244);
+  height:30px;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-bar a {
+  color: blueviolet;
+}
+
+.flats-overall {
+  width: 90%;
+  margin: auto;
+}
+
+.flats-cards-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.flats-card {
+  margin: 10px;
+}
+
+.flats-card img {
+  height: 180px;
+  background-position: center;
+  background-size: cover;
+}
+
+.banner {
+  background-size: cover;
+  padding: 150px 0;
+  width: 100%;
+  z-index: 0;
+  position: relative;
+}
+
+.cards-container {
+  display: grid;
+  gap: 5px;
+  grid-auto-flow: column;
+  grid-template-rows: 2fr 1fr;
+  z-index: 100;
+  position: absolute;
+  top: 275px;
+}
+
+.card-med {
+  background-color: rgb(242, 242, 244);
+  padding: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  margin: 20px;
+  max-width: 45%;
+  height: 150px;
+}
+
+.card-sml {
+  background-color: rgb(242, 242, 244);
+  padding: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  margin: 20px;
+  max-width: 25%;
+  height: 150px;
+}

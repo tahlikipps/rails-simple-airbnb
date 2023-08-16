@@ -1,0 +1,27 @@
+<div class="flats-overall">
+
+  <h2>All our Flats</h2>
+  <% unless @flats.empty? %>
+  <p>All <%= @flats.count %>.</p>
+  <% end %>
+
+  <div class="flats-cards-container">
+  <% @flats.each do |flat| %>
+    <%= link_to flat_path(flat) do %>
+      <div class="flats-card">
+
+      <img src="https://cdn.pixabay.com/photo/2016/06/24/10/47/house-1477041_1280.jpg" alt="House with pool">
+      <h4><%= flat.name %></h4>
+      <p><%= flat.address %></p>
+      <p>$<%= flat.price_per_night %> <i class="fa-solid fa-people-group"></i><%= flat.number_of_guests %> people</p>
+        <div class="admin-links">
+        <%= link_to 'More info', flat_path(flat) %>
+        <%= link_to 'Edit', edit_flat_path(flat) %>
+        <%= link_to 'Remove', flat_path(flat), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }%>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+  </div>
+
+</div>

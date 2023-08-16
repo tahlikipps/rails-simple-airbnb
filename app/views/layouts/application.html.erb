@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+  <div class="nav-bar">
+    <a href="/"><h3>Simple Airbnb</h3></a>
+    <a href="/flats/new"><h4>Add flat</h4></a>
+  </div>
     <%= yield %>
   </body>
 </html>
